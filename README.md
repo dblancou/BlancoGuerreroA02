@@ -80,7 +80,7 @@ Esta aplicación está desarrollada utilizando Flutter. Asegúrate de tener Flut
 
 Adjunto encontrarás una captura de pantalla que muestra la apariencia de la aplicación.
 
-![Captura de Pantalla](https://github.com/dblancou/BlancoGuerreroA02/blob/main/CapturaA02.JPG)
+![Captura de Pantalla](https://github.com/dblancou/BlancoGuerreroA02/blob/main/CapturaA03.JPG)
 
 ## Autor
 
