@@ -1,3 +1,4 @@
+import 'package:blancoguerreroa02/widget/btn_count.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +10,42 @@ void main() {
 // Pantalla principal del contador
 class ContadorScreen extends StatelessWidget {
   const ContadorScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return countScreen();
+  }
+}
+
+class countScreen extends StatefulWidget {
+  @override
+  _countScreenState createState() => _countScreenState();
+}
+
+class _countScreenState extends State<countScreen> {
+  int count = 0;
+  void sumar() {
+    setState(() {
+      count++;
+      debugPrint("$count");
+    });
+  }
+
+  void restar() {
+    setState(() {
+      if (count > 0) {
+        count--;
+        debugPrint("$count");
+      }
+    });
+  }
+
+  void resetear() {
+    setState(() {
+      count = 0;
+      debugPrint("$count");
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +72,12 @@ class ContadorScreen extends StatelessWidget {
               ),
             ),
             // Sección del valor numérico (por ejemplo, "0")
-            const Expanded(
+            Expanded(
               flex: 3,
               child: Center(
                 child: Text(
-                  '0',
-                  style: TextStyle(
+                  "${count}",
+                  style: const TextStyle(
                     fontFamily: 'PoppinsThin',
                     color: Colors.white,
                     fontSize: 200,
@@ -54,47 +91,11 @@ class ContadorScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF1B1B1B),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                    child: const Text(
-                      '+',
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF1B1B1B),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                    child: const Text(
-                      'RESET',
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF1B1B1B),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(18),
-                      ),
-                    ),
-                    child: const Text(
-                      '-',
-                      style: TextStyle(fontSize: 30),
-                    ),
-                  ),
+                  BotonCount(text: "+", fontsize: 20, onpressed: sumar),
+                  const SizedBox(width: 30),
+                  BotonCount(text: "RESET", fontsize: 14, onpressed: resetear),
+                  const SizedBox(width: 30),
+                  BotonCount(text: "-", fontsize: 20, onpressed: restar)
                 ],
               ),
             ),
