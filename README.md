@@ -51,3 +51,46 @@ Esta aplicación fue diseñada por Daniel Blanco.
 Crea un nuevo proyecto y desarrolla un contador en Flutter. Por ahora, no es necesario implementar la funcionalidad del contador, solo replica visualmente la interfaz proporcionada en el enunciado.
 
 ---
+
+# Proyecto Flutter: Contador Funcional
+
+En esta actualización del proyecto Flutter, se han realizado mejoras en la organización del código y se han introducido botones personalizados para las operaciones del contador. A continuación, se describen las modificaciones realizadas:
+
+## Estructura del Proyecto
+
+El código fuente está organizado en varios archivos para mejorar la legibilidad y la modularidad:
+
+- **`main.dart`**: Contiene la inicialización de la aplicación y la presentación de la pantalla del contador.
+- **`count_screen.dart`**: Define la clase `countScreen`, que es un StatefulWidget que controla el estado del contador y la interfaz gráfica.
+- **`boton_count.dart`**: Contiene la implementación del widget `BotonCount`, un botón personalizado utilizado para las operaciones del contador.
+
+## Pantalla del Contador - `count_screen.dart`
+
+La pantalla del contador se ha refactorizado para utilizar un StatefulWidget llamado `countScreen`. Este widget gestiona el estado del contador y la interfaz gráfica. Las operaciones de sumar, restar y resetear se han encapsulado en métodos, y se ha introducido un nuevo widget, `BotonCount`, para representar los botones personalizados.
+
+## Widget Personalizado - `BotonCount`
+
+Se ha creado un nuevo widget llamado `BotonCount` para representar los botones personalizados utilizados en la interfaz. Este widget acepta parámetros como el texto del botón, el tamaño de fuente y la función a ejecutar al hacer clic. Mejora la reutilización del código y proporciona una forma más limpia de agregar nuevos botones en el futuro.
+
+## Requisitos del Sistema
+
+Esta aplicación está desarrollada utilizando Flutter. Asegúrate de tener Flutter instalado en tu entorno de desarrollo. Puedes obtener más información sobre la instalación de Flutter [aquí](https://flutter.dev/docs/get-started/install).
+
+## Captura de Pantalla
+
+Adjunto encontrarás una captura de pantalla que muestra la apariencia de la aplicación.
+
+![Captura de Pantalla](https://github.com/dblancou/BlancoGuerreroA02/blob/main/CapturaA02.JPG)
+
+## Autor
+
+Esta aplicación fue diseñada por Daniel Blanco.
+
+## Enunciado de la Tarea
+
+    - Deberás de crear una clase en flutter que sea una plantilla de los botones, en la que le pases el argumento de texto y sustituirlo por los 3 botones que tenemos → 2 puntos
+    - Darle funcionalidad a los botones, cambios solo por consola → 2 puntos
+    - Cambios por pantalla → 4 puntos.
+    - README → 2 puntos.
+
+---
